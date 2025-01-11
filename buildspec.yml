@@ -2,7 +2,6 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo "Fetching sensitive data..."
-      - aws s3 cp s3://purple-mountain-data-backup/secrets.txt /tmp/secrets.txt
-      - cat /tmp/secrets.txt
-
+      - echo "Fetching flag from S3 bucket..."
+      - aws s3 cp s3://purple-mountain-data-backup/flag.txt /tmp/flag.txt
+      - cat /tmp/flag.txt
